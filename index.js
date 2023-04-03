@@ -1,16 +1,22 @@
+import {debounce} from './debounce.js'
 const input = document.querySelector('#search');
 const userList = document.querySelector('.user-list');
 const form = document.querySelector('#form');
 const URL = 'https://api.github.com/search/users?q=';
 const URL_USUARIO = 'https://api.github.com/users/';
 const URL_REPOS = 'https://api.github.com/users/';
+const loader= document.querySelector('#onload')
 
 form.addEventListener('submit', (e) => {
     userList.innerHTML = ``;
     e.preventDefault();
-    search = input;
+    let search = input;
     console.log(search.value);
-    buscar(search);
+    loader.classList.toggle('mostrar');
+    const buscarDebounced = debounce(buscar, 3000);
+    buscarDebounced(search);
+    // debounce(()=> buscar(search),5000);
+    // buscar(search);
 });
 
 function buscar(search) {
@@ -72,4 +78,6 @@ function buscar(search) {
                     });
             });
         });
+        input.value='';
+        loader.classList.toggle('mostrar');
 }
