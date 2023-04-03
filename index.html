@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="author" content="Luis Paredes" />
+        <meta
+            name="description"
+            content="Buscador de GitHUB, que muestra los datos del usuario, cantidad de repositorios, imagen de perfil y muchos datos mas."
+        />
+        <meta
+            name="keywords"
+            content="Buscador, Usuarios, Github, repositorios, perfil"
+        />
+        <title>Buscador de Usuarios GitHUB</title>
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body>
+        <div>
+            <h1>Buscador de Usuarios para Github</h1>
+            <p>
+                Encuentra los usuarios que desees con solo su nombre de usuario
+            </p>
+        </div>
+        <form id="form" action="">
+            <label for="usuario">Nombre de usuario</label>
+            <input id="search" type="text" placeholder="Nombre de usuario" />
+            <button type="submit">Enviar</button>
+        </form>
+        <section class="user-list"></section>
+
+        <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
+        <script src="index.js"></script>
+    </body>
+</html>

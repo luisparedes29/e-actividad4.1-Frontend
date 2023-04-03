@@ -1,0 +1,73 @@
+body{
+    padding: 0;
+    margin: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.user-list{
+    display: flex;
+    /* flex-direction: row; */
+    flex-wrap: wrap;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    gap: 70px;
+    height: 70vh;
+}
+.contenedorTarjeta{
+    width: 300px;
+    height: 200px;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #FFA559;
+    border-radius: 7%;
+
+}
+
+figure{
+    display: block;
+    margin-block-start: 0px;
+    margin-block-end: 0px;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+.contenedorImg{
+    width: 40%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imgUsuario{
+    width: 93px;
+    height: 93px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: top;
+}
+
+.contSecundario{
+    width: 60%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.numRepo{
+    font-size: 30px;
+}
+
+.username{
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.nombre{
+    font-size: 12px;
+    font-weight: 600;
+}
