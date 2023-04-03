@@ -13,7 +13,7 @@ form.addEventListener('submit', (e) => {
     let search = input;
     console.log(search.value);
     loader.classList.toggle('mostrar');
-    const buscarDebounced = debounce(buscar, 3000);
+    const buscarDebounced = debounce(buscar, 5000);
     buscarDebounced(search);
     // debounce(()=> buscar(search),5000);
     // buscar(search);
@@ -61,7 +61,7 @@ function buscar(search) {
                         element.appendChild(contSecundario);
                         contSecundario.appendChild(username);
                         if (data.name) {
-                            nombreUsuario.innerHTML = `<span class="nombre">${data.name}</span> `;
+                            nombreUsuario.innerHTML = `name:<span class="nombre">${data.name}</span> `;
                             contSecundario.appendChild(nombreUsuario);
                         } else {
                             nombreUsuario.innerHTML = `name: <span class="name">N/A</span>`;
