@@ -1,11 +1,12 @@
-import {debounce} from './debounce.js'
+import { debounce } from './debounce.js';
 const input = document.querySelector('#search');
 const userList = document.querySelector('.user-list');
 const form = document.querySelector('#form');
 const URL = 'https://api.github.com/search/users?q=';
 const URL_USUARIO = 'https://api.github.com/users/';
 const URL_REPOS = 'https://api.github.com/users/';
-const loader= document.querySelector('#onload')
+const loader = document.querySelector('#onload');
+let icon = '<i class="fa-solid fa-sun"></i>';
 
 form.addEventListener('submit', (e) => {
     userList.innerHTML = ``;
@@ -78,6 +79,11 @@ function buscar(search) {
                     });
             });
         });
-        input.value='';
-        loader.classList.toggle('mostrar');
+    input.value = '';
+    loader.classList.toggle('mostrar');
 }
+const DarkModeButton = document.querySelector('.DarkModeButton');
+
+DarkModeButton.addEventListener('click', () => {
+    document.body.classList.toggle('dark');
+});

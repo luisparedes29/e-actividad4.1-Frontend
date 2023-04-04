@@ -1,16 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 body {
     padding: 0;
     margin: 0;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: 'Roboto';
 }
 
 .hidden{
-    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .centrado{
     height: 100vh;
     display: none;
+    position: absolute;
     justify-content: center;
     align-items: center;
 }
@@ -217,6 +222,44 @@ body {
     }
 }
 
+header{
+    background-color: #75a0c9;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
+header div{
+    margin-left: 1rem;
+}
+header div h1,
+header div p{
+    margin: 0;
+}
+
+header form{
+    padding: 1rem;
+}
+header form input,
+header form button{
+    font-size: 1rem;
+    padding: 0.5rem;
+    border: #414856 solid 2px;
+    border-radius: 0.2rem;
+}
+header form button{
+    background-color: #414856;
+    color: white;
+}
+
+header form button:hover{
+    background-color: white;
+    color: #414856;
+    cursor: pointer;
+}
+
 .user-list {
     display: flex;
     /* flex-direction: row; */
@@ -225,17 +268,18 @@ body {
     text-align: center;
     justify-content: center;
     gap: 70px;
-    height: 70vh;
+    min-height: 70vh;
+    padding: 1rem;
 }
 .contenedorTarjeta {
     width: 300px;
     height: 200px;
     padding: 20px;
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
-    background-color: #ffa559;
-    border-radius: 7%;
+    background-color: #c3c8de;
+    border-radius: 0.4rem;
+    text-align: start;
 }
 
 figure {
@@ -268,18 +312,85 @@ figure {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: start;
 }
 
 .numRepo {
-    font-size: 30px;
+    font-size: 20px;
 }
 
 .username {
     font-size: 20px;
     font-weight: 700;
+    margin: 0;
 }
 
 .nombre {
     font-size: 12px;
     font-weight: 600;
+    margin: 0;
+}
+.company{
+    margin-bottom: 0;
+}
+
+.DarkModeButton{
+    cursor: pointer;
+    width: 4rem;
+    height: 4rem;
+    background-color: #75a0c9;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: 3rem;
+    right: 3rem;
+    font-size: 2rem;
+    border-radius: 100%;
+    overflow: hidden;
+}
+
+@media (max-width: 1024px){
+    header h1{
+        font-size: 1.5rem;
+    }
+    header p{
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 820px){
+    header h1{
+        font-size: 1.2rem;
+    }
+    header p{
+        font-size: 0.6rem;
+    }
+}
+
+@media (max-width: 768px) {
+    header{
+        flex-direction: column;
+    }
+}
+
+@media (max-width:414px){
+    header div{
+        margin-left: 0;
+        padding: 0.5rem;
+        text-align: center;
+    }
+    header div h1{
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+    header p{
+        font-size: 1rem;
+    }
+
+
+    
+    header form label{
+        display: none;
+    }
 }

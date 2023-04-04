@@ -1,0 +1,18 @@
+body.dark{
+    background-color: rgba(0, 0, 0, 0.897);
+}
+body.dark header{
+    background-color: rgb(54, 52, 52);
+    color: white;
+}
+
+body.dark .DarkModeButton{
+    background-color: black;
+    color:white;
+}
+
+
+body.dark .contenedorTarjeta{
+    background-color: rgb(58, 58, 58);
+    color: white;
+}

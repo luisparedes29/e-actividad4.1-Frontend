@@ -15,6 +15,11 @@
         />
         <title>Buscador de Usuarios GitHUB</title>
         <link rel="stylesheet" href="styles.css" />
+        <script
+            src="https://kit.fontawesome.com/b435f5486e.js"
+            crossorigin="anonymous"
+        ></script>
+        <link rel="stylesheet" href="dark.css" />
     </head>
     <body class="hidden">
         <div class="centrado" id="onload">
@@ -44,7 +49,7 @@
                 </p>
             </div>
             <form id="form" action="">
-                <label for="usuario">Nombre de usuario</label>
+                <label for="usuario">Nombre de usuario: </label>
                 <input
                     id="search"
                     type="text"
@@ -55,7 +60,9 @@
         </header>
 
         <section class="user-list"></section>
-
+        <div class="DarkModeButton">
+            <i class="fa-solid fa-moon"></i>
+        </div>
         <script src="index.js" type="module"></script>
     </body>
 </html>
